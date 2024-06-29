@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@keyframes ellipsis {
+  0% {
+    content: ". ";
+  }
+  33% {
+    content: ".. ";
+  }
+  66% {
+    content: "...";
+  }
+}
+
+.ellipsis-animation {
+  font-size: 20px;
+  margin-left: 10px;
+  animation: ellipsis 1.5s infinite steps(3);
+}
+
+:root {
+  --header-color: #a1d6e2;
+  --app-color: var(--header-color);
+  --text-color: rgb(58, 70, 69);
+  --button-color: #1995ad;
+  --border-color: rgba(255, 255, 255, 1);
+}
+.required{
+  color: red;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; 
+}
+
+.image-container img {
+  display: block;
+  transition: transform 0.3s ease; /* Optional: Add transition for image */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth transition for effect */
+}
+
+.overlay svg {
+  font-size: 3em; 
+  color: white; 
+  font-weight: bold;
+}
+
+.image-container:hover .overlay {
+  opacity: 1; 
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.image-container:hover img {
+  transform: scale(1.1); /* Optional: Zoom effect on hover */
+}
+body,
+html,
+#root,
+body * {
+  overflow-x: hidden !important;
+  position: relative;
+}
+path {
+  fill: var(--button-color) !important;
+}
+body {
+  margin: 0;
+}
+h1,
+h2 {
+  font-weight: 300;
+}
+.VictoryContainer
+svg text * {
+  font-family: "Montserrat", sans-serif !important;
+  fill: var(--text-color) !important;
+}
+* {
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.App {
+  text-align: center;
+  background-color: var(--app-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-upload-form {
+  width: 400px;
+  padding: 20px 0;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+  padding: 8px 0;
+  width: 95%;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.btn-upload {
+  background-color: var(--button-color);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 0.5px solid #fff;
+  width: 95%;
+  border-radius: 8px;
+}
+
+:is(.error-toast div, .error-toast svg) {
+  color: red;
+  fill: red !important;
+}
+.VictoryContainer{
+  margin-top: -60px !important;
+}
+.VictoryContainer svg {
+  width: 800px !important;
+}
+[id^="chart-bar-2-labels-"] {
+  display: none;
+}
+.glass-container {
+  background: rgba(188, 186, 190, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+}
+.App-header {
+  background-color: var(--header-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  border-bottom: 2px solid var(--text-color);
+  color: white;
+  width: 100%;
+}
+.App-header h1 {
+  margin: 1rem;
+}
+footer {
+  border-top: 2px solid var(--text-color);
+  background-color: var(--header-color);
+  width: 100%;
+  color: white;
+  
+
+  padding: 10px;
+}
+.App-link {
+  color: #61dafb;
+}
