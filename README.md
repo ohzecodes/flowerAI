@@ -1,5 +1,5 @@
 # Flower AI
-An Artificial Intelligence website to identify flowers
+An Artificial Intelligence software to identify flowers
 
 
 ## Overview
