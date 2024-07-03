@@ -18,21 +18,20 @@ For seamless interaction, Flask is used to create APIs that connect the trained 
 - React
 
 ## Steps to run
+1. ensure that you've python sand npm installed
 1. Install requirements 
  - Backend
- ```cd  backend```
-    ``` pip install -r requirements.txt```
+ ```cd  backend && pip install -r requirements.txt```
 - FrontEnd
-    ```cd frontend ```
-    ``` npm install ```
+    ```cd frontend && npm install ```
 2. Train the classifier using train.py to  gernerate the checkpoint file (optional) - the provided checkpoint file uses the VGG11 model
 3. run server.py
-    ```python3 server.py```
+    ```cd  backend && python3 server.py```
 4. run the frontend
-    ```npm run start ```
+    ```cd frontend && npm run start ```
 5. enjoy.
 
 
 
 ## Visuals
-[Screenshot](./Screenshot.png)
+![FrontEnd](./Screenshot.png)
