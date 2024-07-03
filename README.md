@@ -3,7 +3,7 @@ An Artificial Intelligence software to identify flowers
 
 
 ## Overview
-This  Application demonstrates my expertise in artificial intelligence and software development by creating an advanced image classifier. It's purpose is to identify flower species using a dataset of high-resolution images annotated with 102 distinct categories. Each image is crucial for training the convolutional neural network (CNN), ensuring precise classification of various flower types.
+This Application demonstrates my expertise in artificial intelligence and software development by creating an advanced image classifier. It's purpose is to identify flower species using a dataset of high-resolution images annotated with 102 distinct categories. Each image is crucial for training the convolutional neural network (CNN), ensuring precise classification of various flower types.
 
 Utilizing PyTorch, the project implements machine learning algorithms and computer vision techniques. PyTorch enables the extraction of intricate features from the dataset, thereby enhancing accuracy in flower classification.
 
