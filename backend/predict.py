@@ -112,7 +112,9 @@ def main_flask(image_path, checkpoint, top_k=5, category_name="cat_to_name.json"
     model = load_model(checkpoint, device)
     names_flowers_map = load_flower_names(category_name)
     prediction = output_stats(image_path, names_flowers_map, model, top_k, device)
-    return prediction
+    p=dict(prediction)
+    p["arch"] = str(checkpoint).replace("./checkpoint_","").replace(".pth","")
+    return p
 
 
 def main():
@@ -120,10 +122,10 @@ def main():
 
     device = get_device(args.gpu)
     model = load_model(args.checkpoint, device)
-    print(model)
+
     names_flowers_map = load_flower_names(args.category_name)
     prediction = output_stats(args.path, names_flowers_map, model, args.top_k, device)
-
+    prediction.append({"arch", model.arch})
     display_stats(args.path, prediction)
 
 

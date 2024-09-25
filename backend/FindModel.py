@@ -7,10 +7,10 @@ ssl._create_default_https_context = ssl._create_unverified_context
 def findModel(arch):
 
     dispatch = {
-        "vgg11": lambda: models.vgg11(weights=models.vgg.VGG11_Weights.DEFAULT),
+        "vgg11": lambda: models.vgg11(weights=None),
+        "squeezenet": lambda: models.alexnet(weights=None),
         "resnet18": lambda: models.resnet18(pretrained=True),
         "alexnet": lambda: models.alexnet(pretrained=True),
-        "squeezenet": lambda: models.alexnet(pretrained=True),
         "vgg16": lambda: models.vgg16(),
         "densenet161": lambda: models.densenet161(pretrained=True),
         "inception": lambda: models.inception_v3(pretrained=True),

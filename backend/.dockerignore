@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+*.db
+./flowers/train
+./flowers/valid
+./checkpoint_vgg11.pth
+*.log

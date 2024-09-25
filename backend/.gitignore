@@ -100,3 +100,4 @@ ENV/
 # mypy
 .mypy_cache/
 
+./checkpoint_vgg11.pth
