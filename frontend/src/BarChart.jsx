@@ -2,7 +2,9 @@ import React from 'react';
 import { VictoryBar, VictoryChart, VictoryAxis } from 'victory';
 
 const HorizontalBarChart = ({ data }) => {
-  const formattedData = data
+  const d= {...data}
+  delete d.arch
+  const formattedData = Object.entries(d)
     .map(([label, value]) => ({ label, value:value*100 }))
     .sort((a, b) => b.value - a.value);
 

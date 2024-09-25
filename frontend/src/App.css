@@ -11,7 +11,16 @@
     content: "...";
   }
 }
+.close-button {
+  background: unset;
+  border: unset;
+  font-size: 30px;
+  cursor: pointer;
+}
 
+.close-button:hover {
+  color: white; /* Change color or any other style on hover */
+}
 .ellipsis-animation {
   font-size: 20px;
   margin-left: 10px;
