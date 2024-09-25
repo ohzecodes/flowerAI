@@ -6,7 +6,7 @@ import HorizontalBarChart from "./BarChart";
 import ImageUploadForm from "./ImageUploadForm";
 
 const BackendEndpoint =  process.env.REACT_APP_BACKEND_URL;
-
+console.log(BackendEndpoint);
 const FLowerSVG = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ function App() {
       setLoading(false);
     }
   };
-  console.log(imageData);
+
 
   return (
     <div
