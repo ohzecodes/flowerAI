@@ -5,9 +5,12 @@ from werkzeug.utils import secure_filename
 from flask_cors import CORS
 from predict import main_flask
 import logging
-cors_resource = "*" # Change this to the URL of your frontend app
 
 app = Flask(__name__)
+
+cors_resource = os.environ.get('frontend_url', '*')
+
+
 CORS(app, resources={r"*": {"origins": cors_resource}})
 
 
