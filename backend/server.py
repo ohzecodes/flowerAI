@@ -1,25 +1,28 @@
 import os
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 from werkzeug.utils import secure_filename
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from predict import main_flask
 import logging
 
 app = Flask(__name__)
 
 cors_resource = os.environ.get('frontend_url', '*')
-
-
 CORS(app, resources={r"*": {"origins": cors_resource}})
 
 
 @app.route("/")
 def home():
-    return "Hello Flowers App! please use the predict endpoint to classify an image"
+    return Response("<h1 style='background-color:lightblue;text-align: center; height: 100vh; display: flex; "
+                    "justify-content: center; align-items: center;'>"
+                    "Hello Flowers App! Please use the frontend."
+                    "</h1>",
+                    mimetype='text/html')
 
 
 @app.route('/predict', methods=['POST'])
+@cross_origin(origins=cors_resource)
 def predict_image():
     if 'file' not in request.files:
         return jsonify({"error": "No file part in the request"}), 400

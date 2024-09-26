@@ -18,4 +18,6 @@ COPY . .
 EXPOSE 10000
 
 
+
 CMD ["python", "server.py"]
+#CMD ["gunicorn", "--bind", "0.0.0.0:10000", "server:app"]
