@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#pth files
+./checkpoint_vgg11.pth
 # C extensions
 *.so
 
@@ -100,4 +102,3 @@ ENV/
 # mypy
 .mypy_cache/
 
-./checkpoint_vgg11.pth

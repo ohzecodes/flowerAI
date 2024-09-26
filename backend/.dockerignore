@@ -8,3 +8,5 @@ __pycache__
 ./flowers/valid
 ./checkpoint_vgg11.pth
 *.log
+.idea
+.vscode
