@@ -29,6 +29,7 @@ const LoadingComponent = () => (
     <FLowerSVG width={50} height={50} />
     <div className="ellipsis-animation">
       Loading<span className="ellipsis">...</span>
+      <p> Contacting the server. You will be notified of the response or any errors.</p>
     </div>
   </div>
 );
